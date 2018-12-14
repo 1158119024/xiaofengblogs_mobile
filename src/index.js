@@ -1,12 +1,20 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import * as serviceWorker from './serviceWorker';
+import { HashRouter, Switch, Route } from 'react-router-dom'
 
-ReactDOM.render(<App />, document.getElementById('root'));
+import FrontMainLayout from './layouts/frontMainLayout';
+import {front, admin, mobile, userDetails} from './config/routeConstant';
+import FrontUserDetailsLayout from "./layouts/frontUserDetailsLayout/FrontUserDetailsLayout";
 
-// If you want your app to work offline and load faster, you can change
-// unregister() to register() below. Note this comes with some pitfalls.
-// Learn more about service workers: http://bit.ly/CRA-PWA
-serviceWorker.unregister();
+
+
+ReactDOM.render((
+  <HashRouter>
+    <Switch>
+      <Route path={front} exact component={FrontMainLayout}/>
+      <Route path={mobile} exact component={FrontMainLayout}/>
+      <Route path={userDetails} exact component={FrontUserDetailsLayout}/>
+      <Route component={FrontMainLayout}/>
+    </Switch>
+  </HashRouter>
+), document.getElementById('root'));

@@ -1,0 +1,146 @@
+.front-layout{
+  height: 100%;
+}
+.front-layout-header{
+  width: 100%;
+  height: 500px;
+  background-color: #eeeeee;
+  position: relative;
+}
+.header-image-div{
+  height: 300px;
+  text-align: center;
+  padding-top: 20px;
+}
+.header-image{
+  width: 300px;
+  height: 300px;
+  display: inline-block;
+  border-radius: 50%;
+}
+.header-username{
+  padding: 20px;
+  font-size: 50px;
+  text-align: center;
+  color: #666;
+}
+.header-icon{
+  text-align: center;
+  letter-spacing: 15px;
+  color: #999999;
+  margin-top: 10px;
+  position: relative;
+}
+.header-collapse-btn{
+  position: absolute;
+  display: inline-block;
+  right: 10px;
+}
+
+.front-layout-content{
+
+}
+.card-item{
+  position: relative;
+  width: 100%;
+  background-color: #ffffff;
+  font-size: 25px;
+}
+.card-item-top{
+  position: absolute;
+  right: 0;
+}
+.card-item-header{
+  font-size: 40px;
+  padding: 20px;
+  border-left: 10px solid #666666;
+  color: #333333;
+  position: relative;
+}
+.card-item-header-title{
+  color: #333;
+  display: inline-block;
+  width: 70%;
+}
+.card-item-header-date{
+  position: absolute;
+  top: 25px;
+  right: 40px;
+  font-size: 25px;
+}
+.card-item-content{
+  width: 90%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: inline-block;
+  padding: 30px;
+}
+.card-item-footer{
+  padding: 20px 0;
+  margin: 0 20px;
+  border-top: 1px solid #aaaaaa;
+}
+.card-item-footer-tag{
+  padding: 5px 10px;
+  border-radius: 5px;
+  margin-left: 10px;
+}
+.front-layout-footer{
+
+}
+.none{
+  text-align: center;
+  padding: 30px 20px;
+  color: #aaaaaa;
+}
+
+/* 轻提示 */
+.am-icon-lg{
+  width: 60px !important;
+  height: 60px !important;
+}
+
+.am-toast{
+  font-size: 30px !important;
+}
+
+/* 搜索框 */
+.am-search{
+  height: 60px !important;
+}
+.am-search-input{
+  height: 55px !important;
+}
+.am-search-input .am-search-synthetic-ph{
+  height: 50px !important;
+  line-height: 50px !important;
+}
+.am-search-input .am-search-synthetic-ph-placeholder{
+  font-size: 30px !important;
+}
+.am-search-input .am-search-synthetic-ph-icon{
+  background-size: 30px auto !important;
+  width: 40px !important;
+  height: 27px !important;
+}
+.am-search.am-search-start .am-search-input input[type="search"]{
+  padding: 0 28px 0 50px !important;
+}
+.am-search-input input[type="search"]{
+  height: 50px !important;
+  font-size: 25px !important;
+}
+.am-search-input .am-search-clear{
+  background-size: 30px 30px !important;
+  width: 40px !important;
+  height: 40px !important;
+}
+.am-search-cancel{
+  font-size: 30px !important;
+}
+
+/* 下拉操作 */
+.am-pull-to-refresh-indicator{
+  font-size: 25px;
+}
