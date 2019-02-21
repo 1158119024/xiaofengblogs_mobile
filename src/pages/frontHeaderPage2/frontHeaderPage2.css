@@ -1,0 +1,24 @@
+.header-title-div{
+    background: black;
+    color: rgba(255,255,255,.3);
+}
+
+.header-title{
+    font-size: 45px;
+    padding: 20px;
+    display: inline-block;
+    background: linear-gradient(120deg,rgba(255,255,255,0) 100px,rgba(255,255,255,1) 180px,rgba(255,255,255,0) 270px);
+    background-position: -300px 0;
+    background-repeat:no-repeat ;
+    -webkit-background-clip: text;
+    animation: spin 3s linear infinite;
+}
+
+@keyframes spin {
+    from {
+        background-position: -300px 0;
+    }
+    to {
+        background-position: 1000px 0;
+    }
+}

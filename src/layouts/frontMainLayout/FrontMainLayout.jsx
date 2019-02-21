@@ -1,26 +1,26 @@
 import React, { Component } from 'react';
 import {Switch, Route, withRouter} from 'react-router-dom';
 import { observer } from "mobx-react"
-import { observable, action, runInAction } from "mobx"
 import 'animate.css';
 
 import './frontMainLayout.css';
-import FrontHeaderPage from "../../pages/frontHeaderPage/FrontHeaderPage";
 import FrontCollectListPage from "../../pages/frontCollectListPage";
 import FrontArticleListPage from "../../pages/frontArticleListPage";
 import {front, mobile} from "../../config/routeConstant";
 import FrontArticleDetailsPage from "../../pages/frontArticleDetailsPage";
 import FrontArchivesListPage from "../../pages/frontArchivesListPage/FrontArchivesListPage";
+import FrontHeaderPage2 from "../../pages/frontHeaderPage2/FrontHeaderPage2";
+import FrontMainMenu from "../../pages/frontMainMenu/FrontMainMenu";
 
 let startX;
 let startY;
 
 class FrontMainLayoutState {
-
 }
 
 const mainState = new FrontMainLayoutState();
 
+@observer
 class FrontMainLayout extends Component {
 
   touchStart = (ev) => {
@@ -74,9 +74,10 @@ class FrontMainLayout extends Component {
     return (
       <div className="front-layout">
         <div className="front-layout-header animated fadeInDown faster">
-          <FrontHeaderPage />
+          {/*<FrontHeaderPage />*/}
+          <FrontHeaderPage2 />
         </div>
-        <div className="front-layout-content animated linear fadeInUp faster" onTouchStart={this.touchStart} onTouchEnd={this.touchEnd}>
+        <div className="front-layout-content animated linear fadeInUp faster" style={{ height: document.documentElement.clientHeight - 100, overflow: 'auto' }} onTouchStart={this.touchStart} onTouchEnd={this.touchEnd}>
           <Switch>
             <Route path={`${front}/collect/:tagId?/:tagName?/:articleNum?/:type?`} component={FrontCollectListPage} />
             <Route path={`${front}/article/:archivesTime?`} exact component={FrontArticleListPage} />
@@ -89,6 +90,8 @@ class FrontMainLayout extends Component {
         <div className="front-layout-footer">
 
         </div>
+
+        <FrontMainMenu />
       </div>
     );
   }

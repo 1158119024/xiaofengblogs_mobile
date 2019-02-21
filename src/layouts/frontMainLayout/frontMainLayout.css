@@ -3,7 +3,7 @@
 }
 .front-layout-header{
   width: 100%;
-  height: 500px;
+  /*height: 500px;*/
   background-color: #eeeeee;
   position: relative;
 }
@@ -144,3 +144,42 @@
 .am-pull-to-refresh-indicator{
   font-size: 25px;
 }
+/*扇形导航*/
+.nav-wrap{
+  width: 70px;
+  height: 70px;
+  position: fixed;
+  right: 50px;
+  bottom: 50px;
+}
+.all-nav-btn{
+  width: 100%;
+  height: 100%;
+}
+
+.nav-btn{
+  border-radius: 50%;
+  width: 70px;
+  height: 70px;
+  background: #ececec;
+  position: absolute;
+  /*margin: 10px;*/
+}
+.nav-btn > i{
+  margin: 10px;
+  color: #666;
+  display: inline-block;
+}
+
+.home-btn{
+  border-radius: 50%;
+  transition: 1s;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+

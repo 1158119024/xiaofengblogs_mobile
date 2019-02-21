@@ -80,5 +80,16 @@
     background-color: #f1f1f1;
     border-left: 3px solid #d1d1d1;
 }
+.article-content tr:nth-child(1){
+    background-color: #aaaaaa !important;
+}
+.article-content tr:nth-child(2n-1){
+    background-color: #eeeeee;
+}
+.article-content td{
+    border: 1px solid #666;
+    padding: 5px 15px;
+    text-align: center;
+}
 
 

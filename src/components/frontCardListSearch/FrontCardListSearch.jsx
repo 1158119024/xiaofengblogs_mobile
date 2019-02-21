@@ -8,7 +8,6 @@ import moment from 'moment';
 import {CustomIcon} from "../../config/iconfont";
 import PropTypes from "prop-types";
 import {DATE_FORMAT, getColor} from "../../config/constants";
-import {front} from "../../config/routeConstant";
 
 const cardList = [
   {
@@ -117,7 +116,7 @@ class FrontCardListSearch extends Component {
         damping={100}
         ref={el => this.ptr = el}
         style={{
-          height: cardState.height - 500,
+          height: cardState.height - 100,// 减去头部的高度
           overflow: 'auto',
         }}
         indicator={{ activate: '您好！', release: '正在为您准备...', finish: '好的！' }}
